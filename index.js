@@ -3,6 +3,10 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("✅ Delivery API is running - Use POST /min_cost with JSON body like {\"A\": 2, \"E\": 3}");
+});
+
 // Assumptions (adjust if needed)
 const WAREHOUSES = {
   C1: ["A", "B", "C"],
